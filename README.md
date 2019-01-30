@@ -2,7 +2,7 @@
 Made with Create-React-App
 
 Watch
-Reach
+Read
 Play
 Listen
 
