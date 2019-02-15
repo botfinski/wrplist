@@ -1,0 +1,122 @@
+.Button {
+	height: 50px;
+	width: 70px;
+	border: none;
+	background: white;
+	font-family: 'Noto Sans', sans-serif;
+	text-transform: uppercase;
+	position: relative;
+	cursor: pointer;
+
+	span {
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -10px 0 0 -10px;
+	}
+}
+
+
+
+.List-Item-Edit {
+	background: #6000db;
+
+	span {
+		background: url('../../assets/images/edit.png') 0 0 no-repeat;
+	}
+} 
+
+.List-Item-Remove {
+	background: #f40037;
+
+	span {
+		background: url('../../assets/images/trash.png') 0 0 no-repeat;
+	}	
+} 
+
+.Cancel {
+	span {
+		background: url('../../assets/images/cancel.png') 0 0 no-repeat;
+	}
+
+	&:disabled {
+		span {
+			background-position-x: -20px;
+		}
+	}
+}
+
+.Cancel.notMobile {
+	@media screen and (min-width: 768px) {
+		position: fixed;
+		height: 100px;
+		text-indent: 0 !important;
+		background: transparent;
+		text-align: left;
+		left:0;
+		bottom:0;
+		width: 200px;
+		padding: 0 0px 0 75px;
+		font-size: 20px;
+		
+
+		span {
+			left: 25%;
+		}
+	}
+}
+
+.Add-Item {
+
+	@media screen and (min-width: 768px) {
+		position: fixed;
+		height: 100px;
+		text-indent: 0 !important;
+		background: white;
+		text-align: left;
+		right: 0;
+		width: 200px;
+		padding: 0 0px 0 25px;
+		font-size: 20px;
+		
+
+		span {
+			left: 75%;
+		}
+	}
+
+
+	span {
+		background: url('../../assets/images/add.png') 0 0 no-repeat;
+	}	
+} 
+
+.Save-Item {
+	span {
+		background: url('../../assets/images/tick.png') 0 0 no-repeat;
+	}
+
+	&:disabled {
+		span {
+			background-position-x: -20px;
+		}
+	}
+}
+
+.List-Item-Edit, .List-Item-Remove, .Cancel, .Add-Item, .Save-Item {
+	text-indent: -99999px;
+
+	span {
+		background-size: 40px;
+	}
+}
+
+.List-Item-Edit, .List-Item-Remove {
+	span {
+		background-size: 20px;
+	}
+}
+

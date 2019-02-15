@@ -1,0 +1,80 @@
+.Modal {
+
+	@media screen and (min-width: 768px) {
+		left: 50%;
+		width: 30%;
+		transform: translate(-50%, 0%);
+	}
+
+	display: none;
+	position: absolute;
+	z-index: 4;
+	top:20px;
+	left: 20px;
+	background: white;
+	width: calc(100% - 40px);
+	height: calc(100% - 40px);
+
+	&.visible {
+		display: block
+	}
+
+	.Category-Controls {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		box-shadow: 0px -5px 20px 5px #949494;
+
+		.Button {
+			text-transform: capitalize;
+			letter-spacing: 2px;
+			width: 25%;
+			border-right: 1px solid #bcbcbc;
+
+			span {
+				display: none;
+			}
+		}
+
+		.Button:last-child {
+			border: none;
+		}
+
+		.Button.selected, .Button:last-child.selected {
+			border-bottom: 4px solid #6000db;
+		}
+	}
+
+	.Modal-Content {
+		padding: 40px 20px;
+
+		p {
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 12px;
+			letter-spacing: 1px;
+		}
+
+		textarea {
+
+			@media screen and (min-width: 768px) {
+				height: 200px;
+			}
+
+			width: 100%;
+			padding: 15px;
+			resize: none;
+			height: 100px;
+			font: 16px/1.5em 'Noto Sans', sans-serif;
+		}
+
+		textarea:invalid {
+			border:1px solid red;
+		}
+
+		.charsLeft {
+			float: right;
+		}
+	}
+}
+

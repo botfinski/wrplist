@@ -1,0 +1,28 @@
+main {
+	font: 18px/1.5em 'Noto Sans', sans-serif;
+
+	
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+
+		.LeftCol, .RightCol {
+			position: fixed;
+			height: 100%;
+		}
+
+		.LeftCol {
+			width: 25%;
+			background: #f1f1f1;
+		}
+
+		.RightCol {
+			width: 75%;
+			margin-left: 25%;
+		}
+	}
+}
+
+*:focus {
+	outline: 1px solid transparent;
+}

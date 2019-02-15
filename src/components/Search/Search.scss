@@ -1,0 +1,76 @@
+.Search {
+	background: white;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0px -5px 20px 5px #949494;
+
+	
+	@media screen and (min-width: 768px) {
+		position: static;
+		display: block;
+		background: transparent;
+		box-shadow: none;
+	}
+
+	input, select {
+		height: 50px;
+		font: 18px/1.5em 'Noto Sans', sans-serif;
+		border: none;
+		padding: 0 15px;
+	}
+
+	input {
+		@media screen and (min-width: 768px) {
+			width: 100%;
+			border-bottom: 1px solid black;
+			background: transparent;
+			margin: 90px 0;
+		}
+
+		width: 70%;
+	}
+
+	input::placeholder {
+		color: black;
+	}
+
+	select {
+		width: 30%;
+		background: white;
+		border:1px solid white;
+	}
+
+	ul {
+		@media screen and (min-width: 768px) {
+			list-style: none;
+		}
+
+		li {
+			font-size: 20px;
+
+			button {
+				width: 100%;
+				padding: 20px 0;
+				font: 18px/1.5em 'Noto Sans', sans-serif;
+				background: transparent;
+				border:none;
+				cursor: pointer;
+				color: #949494;
+			}
+
+			button:hover {
+				color: #000;	
+			}
+
+			button.selected {
+				color:#000;
+				font-weight: bold;
+			}
+		}
+	}
+}

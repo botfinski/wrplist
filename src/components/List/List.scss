@@ -1,0 +1,60 @@
+.List {
+	height: calc(100% - 100px);
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	top:50px;
+	overflow: scroll;
+
+	@media screen and (min-width: 768px) {
+		overflow-x: hidden;
+		top:100px;
+	}
+
+	.List-Category {
+		margin: 40px 0;
+	}
+
+	.List-Category-Title {
+		font-weight: bold;
+		text-transform: capitalize;
+		font-size: 20px;
+		padding: 10px;
+		background: #f1f1f1;
+		color: #000;
+	}	
+
+	.List-Item {	
+		border-bottom: 1px solid #bcbcbc;
+
+		.List-Item-Name {
+			padding: 15px 20px;
+		}
+
+		.List-Item-Controls {
+			display: none;
+
+			.Button {
+				width: 50%;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+		}
+
+		&.selected {
+			box-shadow: 0px 0px 20px 0px #949494;
+
+			.List-Item-Controls {
+				display: block;
+			}
+		}
+
+		&:last-of-type {
+			border-bottom: none;
+		}
+	}
+}
+
+.No-Results {
+	padding: 40px 20px;
+}
