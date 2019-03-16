@@ -1,28 +1,27 @@
 main {
-	font: 18px/1.5em 'Noto Sans', sans-serif;
+  font: 18px/1.5em "Noto Sans", sans-serif;
 
-	
+  @media screen and (min-width: 768px) {
+    display: flex;
 
-	@media screen and (min-width: 768px) {
-		display: flex;
+    .LeftCol,
+    .RightCol {
+      position: fixed;
+      height: 100%;
+    }
 
-		.LeftCol, .RightCol {
-			position: fixed;
-			height: 100%;
-		}
+    .LeftCol {
+      width: 25%;
+      background: #f1f1f1;
+    }
 
-		.LeftCol {
-			width: 25%;
-			background: #f1f1f1;
-		}
-
-		.RightCol {
-			width: 75%;
-			margin-left: 25%;
-		}
-	}
+    .RightCol {
+      width: 75%;
+      margin-left: 25%;
+    }
+  }
 }
 
 *:focus {
-	outline: 1px solid transparent;
+  outline: 1px solid transparent;
 }
